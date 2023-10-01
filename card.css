@@ -1,0 +1,100 @@
+
+.card-01{
+    width: 500px ;
+    height: 500px;
+    display: flex;
+    align-items: center;
+}
+/* flip card animation code >>>> */
+.flip-card{
+    background-color: transparent;
+    width: 320px;
+    height: 370px;
+    perspective: 1000px;
+    margin: 20px;
+    padding: 10px;
+}
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 16px;
+}
+.flip-card-front {
+    background-image: 
+    linear-gradient(45deg, #6f04d9, #d9048e);
+}
+.flip-card-front img {
+    border-radius: 10px;
+    width: 220px;
+    height: 220px;
+    margin-top: 3rem;
+}
+.flip-card-back {
+    background-image: 
+    linear-gradient(315deg, #6f04d9, #8a045c);
+    color: white;
+    transform: rotateY(180deg);
+}
+.flip-card-back img {
+    border-radius: 10px;
+    width: 140px;
+    height: 140px;
+    margin-top: 3rem;
+}
+.flip-card-back h3 {
+    margin-bottom: 0.3rem;
+}
+.flip-card-back h1 {
+    margin: 0;
+}
+.card-front-h{
+    color: #fff;
+    opacity: 0.5;
+    padding: 5px 2px;
+    margin: 2px;
+    font-weight: 600;
+}
+.myrow{
+    /* width: 1000px; */
+}
+.col-lg-4{
+    text-align: center;
+}
+/* media query for tablets and below  */
+/* size of cards for below 1080px should be 200X230 and image 120X120 */
+@media (max-width:1080px){
+    .flip-card{
+        width: 220px;
+        height: 270px;  
+    }
+    .flip-card-front img{
+        width: 120px;
+        height: 120px;  
+    }
+    .flip-card-back img {
+        border-radius: 10px;
+        width: 70px;
+        height: 70px;
+        margin-top: 3rem;
+    }
+    .card-01{
+        width: 100px;
+        height: 370px;
+    }
+}
+ 
+
