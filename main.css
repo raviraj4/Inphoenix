@@ -368,14 +368,16 @@ input{
     padding: 100px 0;
 }
 #faqsnotcolored h1.big-heading{
-    text-align: center;
+    text-align: left;
+    padding-left: 15%;
 }
 .acc{
     padding: 7% 15%;
-    position: relative;
-    right: 20%;
-    left: 10%;
+    /* display: flex    ; */
+    max-width: 80%;
+
 }
+
 .accordion{
     outline: none;
 }
